@@ -62,7 +62,6 @@ body {
   padding-right: 9rem;
   z-index: 100;
   position: relative;
-  z-index: 100;
 }
 
 .navigation {
@@ -112,13 +111,7 @@ body {
   height: 68.5rem;
   padding-top: 10rem;
   position: relative;
-}
-
-.left__content {
-  margin-top: 2rem;
-  margin-left: 16rem;
-  z-index: 1000;
-  position: relative;
+  overflow: hidden;
 }
 
 .hero__image {
@@ -126,6 +119,12 @@ body {
   bottom: 0;
   right: 0;
   z-index: 3;
+}
+.left__content {
+  margin-top: 2rem;
+  margin-left: 16rem;
+  z-index: 1000;
+  position: relative;
 }
 
 .circle__image {
@@ -423,12 +422,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 38rem;
+  min-height: 38rem;
   background: #f8f8f8;
+  position: relative;
 }
 
 .information {
   margin-right: 25rem;
+  position: relative;
 }
 
 .information__header {
@@ -447,8 +448,12 @@ p.information__subheader {
   margin-bottom: 2.2rem;
   color: #8d8d8d;
 }
+.form {
+  display: flex;
+}
 .form > input {
-  width: 47.9rem;
+  max-width: 47.9rem;
+  width: 100%;
   height: 5.4rem;
   padding: 1.8rem 2.24rem;
 
@@ -486,7 +491,8 @@ p.information__subheader {
   padding: 0 12.6rem;
   justify-content: space-between;
   align-items: center;
-  height: 13.3rem;
+  /* I add max */
+  max-height: 13.3rem;
   background: #fefefe;
   border-bottom: 1px solid #f4f4f4;
 }
@@ -496,24 +502,30 @@ p.information__subheader {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* align-items: space-between; */
   padding: 13.1rem 10.1rem 10.7rem;
 }
 
 .advertisement-boxes {
   display: flex;
   justify-content: space-between;
+  /* flex-wrap: wrap; */
   margin-bottom: 13.8rem;
 }
 .advert-box {
   display: flex;
   justify-content: center;
+  /* flex: .8; */
   align-items: center;
-  max-width: 38.762rem;
-  width: 38.762rem;
+  /* min-width: 38.762rem; */
+  width: 100%;
   height: 31.769rem;
   background: #fbfbfb;
   border: 1px solid #d6d6d6;
   border-radius: 0.4rem;
+}
+.advert-box:not(:last-child) {
+  margin-right: 4rem;
 }
 .advert-box > .text {
   font-weight: 600;
@@ -527,6 +539,8 @@ p.information__subheader {
   justify-content: space-between;
   align-items: center;
   align-self: center;
+  /* I changed the width */
+  /* width: 100%; */
   width: 108.3rem;
   height: 18.8rem;
   padding: 0 9rem;
@@ -541,8 +555,10 @@ h4.advert-content {
   font-size: 2.5rem;
   line-height: 3rem;
   color: #303030;
+  margin-right: 25.3rem;
 }
 button.createaccount-btn {
+  /* width: max-content; */
   border: none;
   background: #ff6634;
   padding: 1.7rem 2.4rem 1.6rem 2.5rem;
@@ -563,6 +579,7 @@ button.createaccount-btn {
 
 /* Footer */
 section.footer {
+  width: 100%;
   font-family: "Montserrat-regular";
   display: flex;
   /* justify-content: center; */
@@ -639,3 +656,7 @@ section.footer {
   opacity: 1;
   margin-bottom: 2rem;
 }
+
+/* Media Query For all the Sections */
+
+
