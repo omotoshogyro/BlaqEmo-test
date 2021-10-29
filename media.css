@@ -52,7 +52,8 @@
   .hero1__image,
   .hero2__image,
   .hero3__image,
-  .hero5__image .circle__image {
+  .hero5__image,
+  .circle__image {
     width: 100%;
     top: 10rem;
     right: -20rem;
@@ -174,6 +175,9 @@
 @media screen and (max-width: 23.4375em) {
   .featureboxes {
     grid-template-columns: minmax(29rem, max-content);
+  }
+  .left__content {
+    margin-left: 1rem;
   }
 }
 
