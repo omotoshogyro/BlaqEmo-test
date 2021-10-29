@@ -49,8 +49,10 @@
     margin-left: 4rem;
   }
 
-  .hero__image,
-  .circle__image {
+  .hero1__image,
+  .hero2__image,
+  .hero3__image,
+  .hero5__image .circle__image {
     width: 100%;
     top: 10rem;
     right: -20rem;
