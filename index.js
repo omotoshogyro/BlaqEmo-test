@@ -47,6 +47,25 @@ setInterval(() => {
   }
   if (i >= images.length) {
     i = 0;
-    console.log("checking");
   }
 }, 3000);
+
+// IntersectionObserver
+
+const boxes = document.querySelectorAll(".animate");
+// console.log(boxes);
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      console.log(entry.target, "here");
+      entry.target.style.animation = `animateBox .5s ease-in forwards`;
+    } else {
+      entry.target.style.animation = "none";
+    }
+  });
+});
+
+boxes.forEach((box) => {
+  observer.observe(box);
+});

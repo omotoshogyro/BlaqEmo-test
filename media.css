@@ -147,12 +147,11 @@
     grid-row-gap: 2.5rem;
     grid-template-columns: repeat(2, minmax(max-content, max-content));
   }
+
   .top-part {
-    margin: 3.1rem 1rem 0 1rem;
+    margin-right: 2rem;
   }
-  .bottom-part {
-    padding: 1.6rem 0 1.8rem 1rem;
-  }
+
   .subscribe {
     padding: 1rem;
   }
@@ -196,6 +195,14 @@
 @media screen and (max-width: 23.4375em) {
   .featureboxes {
     grid-template-columns: minmax(29rem, max-content);
+    grid-column-gap: 2rem;
+  }
+
+  .top-part {
+    margin: 3.1rem 0 0 3.1rem;
+  }
+  .bottom-part {
+    padding: 1.6rem 0 1.8rem 2.9rem;
   }
   .left__content {
     margin-left: 1rem;
@@ -227,5 +234,16 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes animateBox {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
